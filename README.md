@@ -1,4 +1,4 @@
-# oil-supply-demand
+# crude-oil-analysis
 
 Python tools for crude oil market analysis. Built to develop 
 quantitative skills in the energy field.
