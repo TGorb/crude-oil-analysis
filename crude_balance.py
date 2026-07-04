@@ -40,6 +40,12 @@ def fetch_series(series_id, length=12):
 
 # used float instead of int to avoid rounding errors dealing in 000s.
 
-# --- Temporary test ---
-test_df = fetch_series(SERIES["production"])
-print(test_df)
+# pulling all 5 series
+balance_data = {}
+for name, series_id in SERIES.times():
+    print(f"Fetching {name} ({series_id})...")
+    balance_data[name] = fetch_series(series_id)
+
+print("\nALL series fetched:")
+for name, df in balance_data.items():
+    print(f"{name}: {len(df)} rows")
